@@ -176,8 +176,8 @@ func Stream(w http.ResponseWriter, r *http.Request) {
 
 	// If an UDPxy host is set, and the stream URL is multicast (i.e. starts with 'udp://@'),
 	// then streamInfo.URL needs to be rewritten to point to UDPxy.
-	if Settings.UDPxy != "" && strings.HasPrefix(streamInfo.URL, "udp://@") {
-		streamInfo.URL = fmt.Sprintf("http://%s/udp/%s/", Settings.UDPxy, strings.TrimPrefix(streamInfo.URL, "udp://@"))
+	if Settings.UDPxy != "" && strings.HasPrefix(streamInfo.URL, "rtp://") {
+		streamInfo.URL = fmt.Sprintf("http://%s/udp/%s/", Settings.UDPxy, strings.TrimPrefix(streamInfo.URL, "rtp://"))
 	}
 
 	switch Settings.Buffer {
