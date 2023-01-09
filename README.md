@@ -177,6 +177,7 @@ When the branch is changed, an update is only performed if there is a new versio
 ### Requirements
 
 * [Go](https://golang.org) (go1.18 or newer)
+* [GO111MODULE=on] (go env -w GO111MODULE="on")
 
 ### Dependencies
 
