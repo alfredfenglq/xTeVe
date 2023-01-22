@@ -213,32 +213,7 @@ go get github.com/samber/lo
 go get github.com/stretchr/testify
 ```
 
-#### 3. Update dependencies (optional)
-
-```sh
-go get -u ./...
-```
-
-#### 5. Update web files (optional)
-
-If TypeScript files were changed, run:
-
-```sh
-tsc -p ./ts/tsconfig.json
-```
-
-Then, to embed updated JavaScript files into the source code (src/webUI.go), run it in development mode at least once:
-
-```sh
-go build xteve.go
-xteve -dev
-```
-
-:exclamation: To not to get CreateFile error, do not forget to switch your binary to "regular" mode after runnning with `-dev` flag:
-
-`xteve -branch master` or `xteve -branch beta`
-
-#### 4. Build xTeVe
+#### 3. Build xTeVe
 
 ```sh
 go build xteve.go
